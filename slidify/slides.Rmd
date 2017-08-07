@@ -1,0 +1,61 @@
+---
+title       : app-FabricioDujardin
+subtitle    : Financial Time Series
+author      : Fabricio Dujardin
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+#github:
+#  user: dujarfa
+#  repo: firstslidify
+---
+
+## Outline
+
+
+
+* Introduction - reason & purpose of Shiny App
+* Methodology - background of Shiny App
+* Example - stock with "AAPL"
+
+
+--- .class #1
+
+## Introduction
+
+The purpose of this Shiny App is to deliver the time series of financial stocks found in AMEX, NYSE and NASDAQ. There are further improvements to be done to make it more complete and relevant for the investor. 
+
+--- .class #2
+## Methodology
+I used all the stocks available from the "quantmod" package and put them in a list for input.
+```{r, message=F,warning=F}
+library(quantmod)
+library(data.table)
+library(knitr)
+allStocks <- data.table(stockSymbols())
+kable(allStocks)
+
+```
+
+--- .class #3 
+
+
+## Example
+Loading the required stock and displaying the time series with extra features provided by quantmod chartSeries plot.
+```{r, message=F,warning=F}
+library(quantmod)
+getSymbols("AAPL",src="yahoo")
+chartSeries(AAPL)
+```
+
+
+
+
+
+
+
+

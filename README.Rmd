@@ -1,0 +1,30 @@
+---
+title: "readme"
+author: "Fabricio Dujardin"
+date: "8/7/2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# README
+
+The financial market shiny app is a simplistic version of the power of financial analysis through R. As the app is straight forward I will just mention what it does:
+
+* display graphic of the stock time series selected
+
+There is a lot that can be improved however it is very tedious and time consuming. This is already to my eyes a great way to show the power of shiny and R coupled with great packages.
+
+Let me know if you have any links of other shiny apps that are similar or having further functionalities as I would be more than happy to look into the code.
+
+## Financial Markets
+
+* AMEX
+* NASDAQ
+* NYSE
+
+# Source
+
+* Yahoo finance website from quantmod package
