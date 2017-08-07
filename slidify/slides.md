@@ -1,18 +1,10 @@
----
-title       : app-FabricioDujardin
-subtitle    : Financial Time Series
-author      : Fabricio Dujardin
-job         : 
-framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
-highlighter : highlight.js  # {highlight.js, prettify, highlight}
-hitheme     : tomorrow      # 
-widgets     : []            # {mathjax, quiz, bootstrap}
-mode        : selfcontained # {standalone, draft}
-knit        : slidify::knit2slides
-#github:
-#  user: dujarfa
-#  repo: firstslidify
----
+Financial Time Series
+========================================================
+author: Fabricio Dujardin 
+date: 7/8/2017
+autosize: true
+
+========================================================
 
 ## Outline
 
@@ -23,15 +15,24 @@ knit        : slidify::knit2slides
 * Example - stock with "AAPL"
 
 
---- .class #1
-
+=====================
 ## Introduction
 
 The purpose of this Shiny App is to deliver the time series of financial stocks found in AMEX, NYSE and NASDAQ. There are further improvements to be done to make it more complete and relevant for the investor. 
 
---- .class #2
+The relevant Shiny App can be found in the following link:
+
+https://dujarfa.shinyapps.io/app-fabriciodujardin/
+
+The relevant code for this Shiny App and the slidify (in slide folder) are in the following link:
+
+https://github.com/dujar/app-FabricioDujardin
+
+===================
 ## Methodology
+
 I used all the stocks available from the "quantmod" package and put them in a list for input.
+
 
 ```r
 library(quantmod)
@@ -6768,11 +6769,13 @@ kable(allStocks)
 |ZX        |China Zenix Auto International Limited                         |    1.7400|$89.83M    |    2011|Capital Goods         |Auto Parts:O.E.M.                                              |NYSE     |
 |ZYME      |Zymeworks Inc.                                                 |    6.8100|$172.53M   |    2017|Health Care           |Major Pharmaceuticals                                          |NYSE     |
 
---- .class #3 
+============
 
 
 ## Example
+
 Loading the required stock and displaying the time series with extra features provided by quantmod chartSeries plot.
+
 
 ```r
 library(quantmod)
@@ -6780,15 +6783,14 @@ getSymbols("AAPL",src="yahoo")
 ```
 
 ```
-## [1] "AAPL"
+[1] "AAPL"
 ```
 
 ```r
 chartSeries(AAPL)
 ```
 
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png)
-
+![plot of chunk unnamed-chunk-2](slides-figure/unnamed-chunk-2-1.png)
 
 
 
